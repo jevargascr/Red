@@ -228,6 +228,10 @@ resource oci_core_service_gateway export_SGW {
   display_name = "SGW"
   freeform_tags = {
   }
+  #route_table_id = <<Optional value not found in discovery>>
+  services {
+    service_id = "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna"
+  }
   vcn_id = oci_core_vcn.export_VCN-Production.id
 }
 
@@ -235,6 +239,10 @@ resource oci_core_service_gateway export_SGW_1 {
   compartment_id = var.compartment_ocid
   display_name = "SGW"
   freeform_tags = {
+  }
+  #route_table_id = <<Optional value not found in discovery>>
+  services {
+    service_id = "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna"
   }
   vcn_id = oci_core_vcn.export_VCN-Non-Production.id
 }
