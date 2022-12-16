@@ -232,7 +232,7 @@ data "oci_core_services" "all_oci_services" {
     values = ["All .* Services In Oracle Services Network"]
     regex  = true
   }
-  count = var.create_service_gateway == true ? 1 : 0
+  #count = var.create_service_gateway == true ? 1 : 0
 }
 
 resource oci_core_service_gateway export_SGW {
@@ -242,11 +242,11 @@ resource oci_core_service_gateway export_SGW {
   }
   #route_table_id = <<Optional value not found in discovery>>
   services {
-    service_id = lookup(data.oci_core_services.all_oci_services[0].services[0], "id")
+    service_id = lookup(data.oci_core_services.all_oci_services.services[0], "id")
   }
   vcn_id = oci_core_vcn.export_VCN-Production.id
 
-  count = var.create_service_gateway == true ? 1 : 0
+  #count = var.create_service_gateway == true ? 1 : 0
 }
 
 resource oci_core_service_gateway export_SGW_1 {
@@ -256,11 +256,11 @@ resource oci_core_service_gateway export_SGW_1 {
   }
   #route_table_id = <<Optional value not found in discovery>>
   services {
-    service_id = lookup(data.oci_core_services.all_oci_services[0].services[0], "id")
+    service_id = lookup(data.oci_core_services.all_oci_services.services[0], "id")
   }
   vcn_id = oci_core_vcn.export_VCN-Non-Production.id
 
-  count = var.create_service_gateway == true ? 1 : 0
+  #count = var.create_service_gateway == true ? 1 : 0
 }
 
 resource oci_core_default_dhcp_options export_Default-DHCP-Options-for-VCN-Non-Production {
