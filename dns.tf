@@ -2,10 +2,6 @@
 
 resource oci_dns_view export_VCN-Non-Production_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:31:20.634Z"
-  }
   display_name = "VCN-Non-Production"
   freeform_tags = {
   }
@@ -14,10 +10,6 @@ resource oci_dns_view export_VCN-Non-Production_1 {
 
 resource oci_dns_view export_VCN-Production_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:30:21.920Z"
-  }
   display_name = "VCN-Production"
   freeform_tags = {
   }
@@ -26,10 +18,6 @@ resource oci_dns_view export_VCN-Production_1 {
 
 resource oci_dns_resolver export_VCN-Non-Production_2 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:31:20.634Z"
-  }
   display_name = "VCN-Non-Production"
   freeform_tags = {
   }
@@ -39,10 +27,6 @@ resource oci_dns_resolver export_VCN-Non-Production_2 {
 
 resource oci_dns_resolver export_VCN-Production_2 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:30:21.920Z"
-  }
   display_name = "VCN-Production"
   freeform_tags = {
   }
@@ -52,10 +36,6 @@ resource oci_dns_resolver export_VCN-Production_2 {
 
 resource oci_dns_zone export_snbastion-vcnproduction-oraclevcn-com {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:08:30.838Z"
-  }
   freeform_tags = {
   }
   name      = "snbastion.vcnproduction.oraclevcn.com"
@@ -66,10 +46,6 @@ resource oci_dns_zone export_snbastion-vcnproduction-oraclevcn-com {
 
 resource oci_dns_zone export_snapp-vcnproduction-oraclevcn-com {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:07:51.366Z"
-  }
   freeform_tags = {
   }
   name      = "snapp.vcnproduction.oraclevcn.com"
@@ -80,10 +56,6 @@ resource oci_dns_zone export_snapp-vcnproduction-oraclevcn-com {
 
 resource oci_dns_zone export_snbackup-vcnproduction-oraclevcn-com {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:07:08.311Z"
-  }
   freeform_tags = {
   }
   name      = "snbackup.vcnproduction.oraclevcn.com"
@@ -94,10 +66,6 @@ resource oci_dns_zone export_snbackup-vcnproduction-oraclevcn-com {
 
 resource oci_dns_zone export_snclient-vcnproduction-oraclevcn-com {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:06:22.333Z"
-  }
   freeform_tags = {
   }
   name      = "snclient.vcnproduction.oraclevcn.com"
@@ -108,10 +76,6 @@ resource oci_dns_zone export_snclient-vcnproduction-oraclevcn-com {
 
 resource oci_dns_zone export_snbackup-vcnnonproductio-oraclevcn-com {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:04:29.557Z"
-  }
   freeform_tags = {
   }
   name      = "snbackup.vcnnonproductio.oraclevcn.com"
@@ -122,10 +86,6 @@ resource oci_dns_zone export_snbackup-vcnnonproductio-oraclevcn-com {
 
 resource oci_dns_zone export_snbastion-vcnnonproductio-oraclevcn-com {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:41:12.054Z"
-  }
   freeform_tags = {
   }
   name      = "snbastion.vcnnonproductio.oraclevcn.com"
@@ -136,10 +96,6 @@ resource oci_dns_zone export_snbastion-vcnnonproductio-oraclevcn-com {
 
 resource oci_dns_zone export_snapp-vcnnonproductio-oraclevcn-com {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:39:49.540Z"
-  }
   freeform_tags = {
   }
   name      = "snapp.vcnnonproductio.oraclevcn.com"
@@ -150,10 +106,6 @@ resource oci_dns_zone export_snapp-vcnnonproductio-oraclevcn-com {
 
 resource oci_dns_zone export_snclient-vcnnonproductio-oraclevcn-com {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:38:34.713Z"
-  }
   freeform_tags = {
   }
   name      = "snclient.vcnnonproductio.oraclevcn.com"
@@ -164,10 +116,6 @@ resource oci_dns_zone export_snclient-vcnnonproductio-oraclevcn-com {
 
 resource oci_dns_zone export_4-56-10-in-addr-arpa {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:31:20.634Z"
-  }
   freeform_tags = {
   }
   name      = "4.56.10.in-addr.arpa"
@@ -178,10 +126,6 @@ resource oci_dns_zone export_4-56-10-in-addr-arpa {
 
 resource oci_dns_zone export_5-56-10-in-addr-arpa {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:30:21.920Z"
-  }
   freeform_tags = {
   }
   name      = "5.56.10.in-addr.arpa"

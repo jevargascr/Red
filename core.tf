@@ -7,10 +7,6 @@ resource oci_core_vcn export_VCN-Non-Production {
     "10.56.4.0/24",
   ]
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:31:20.634Z"
-  }
   display_name = "VCN-Non-Production"
   dns_label    = "vcnnonproductio"
   freeform_tags = {
@@ -28,10 +24,6 @@ resource oci_core_vcn export_VCN-Production {
     "10.56.5.0/24",
   ]
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:30:21.920Z"
-  }
   display_name = "VCN-Production"
   dns_label    = "vcnproduction"
   freeform_tags = {
@@ -44,10 +36,7 @@ resource oci_core_vcn export_VCN-Production {
 
 resource oci_core_internet_gateway export_IGW {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:59:55.916Z"
-  }
+
   display_name = "IGW"
   enabled      = "true"
   freeform_tags = {
@@ -58,10 +47,6 @@ resource oci_core_internet_gateway export_IGW {
 
 resource oci_core_internet_gateway export_IGW_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:37:38.964Z"
-  }
   display_name = "IGW"
   enabled      = "true"
   freeform_tags = {
@@ -74,10 +59,6 @@ resource oci_core_subnet export_SN_Bastion {
   #availability_domain = <<Optional value not found in discovery>>
   cidr_block     = "10.56.5.192/26"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:08:30.838Z"
-  }
   dhcp_options_id = oci_core_vcn.export_VCN-Production.default_dhcp_options_id
   display_name    = "SN_Bastion"
   dns_label       = "snbastion"
@@ -99,10 +80,6 @@ resource oci_core_subnet export_SN_App {
   #availability_domain = <<Optional value not found in discovery>>
   cidr_block     = "10.56.5.128/26"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:07:51.366Z"
-  }
   dhcp_options_id = oci_core_vcn.export_VCN-Production.default_dhcp_options_id
   display_name    = "SN_App"
   dns_label       = "snapp"
@@ -124,10 +101,6 @@ resource oci_core_subnet export_SN_Backup {
   #availability_domain = <<Optional value not found in discovery>>
   cidr_block     = "10.56.5.64/26"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:07:08.311Z"
-  }
   dhcp_options_id = oci_core_vcn.export_VCN-Production.default_dhcp_options_id
   display_name    = "SN_Backup"
   dns_label       = "snbackup"
@@ -149,10 +122,6 @@ resource oci_core_subnet export_SN_Client {
   #availability_domain = <<Optional value not found in discovery>>
   cidr_block     = "10.56.5.0/26"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:06:22.333Z"
-  }
   dhcp_options_id = oci_core_vcn.export_VCN-Production.default_dhcp_options_id
   display_name    = "SN_Client"
   dns_label       = "snclient"
@@ -174,10 +143,6 @@ resource oci_core_subnet export_SN_Backup_1 {
   #availability_domain = <<Optional value not found in discovery>>
   cidr_block     = "10.56.4.64/26"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:04:29.557Z"
-  }
   dhcp_options_id = oci_core_vcn.export_VCN-Non-Production.default_dhcp_options_id
   display_name    = "SN_Backup"
   dns_label       = "snbackup"
@@ -199,10 +164,6 @@ resource oci_core_subnet export_SN_Bastion_1 {
   #availability_domain = <<Optional value not found in discovery>>
   cidr_block     = "10.56.4.192/26"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:41:12.054Z"
-  }
   dhcp_options_id = oci_core_vcn.export_VCN-Non-Production.default_dhcp_options_id
   display_name    = "SN_Bastion"
   dns_label       = "snbastion"
@@ -224,10 +185,6 @@ resource oci_core_subnet export_SN_App_1 {
   #availability_domain = <<Optional value not found in discovery>>
   cidr_block     = "10.56.4.128/26"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:39:49.540Z"
-  }
   dhcp_options_id = oci_core_vcn.export_VCN-Non-Production.default_dhcp_options_id
   display_name    = "SN_App"
   dns_label       = "snapp"
@@ -249,10 +206,6 @@ resource oci_core_subnet export_SN_Client_1 {
   #availability_domain = <<Optional value not found in discovery>>
   cidr_block     = "10.56.4.0/26"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:38:34.713Z"
-  }
   dhcp_options_id = oci_core_vcn.export_VCN-Non-Production.default_dhcp_options_id
   display_name    = "SN_Client"
   dns_label       = "snclient"
@@ -272,42 +225,22 @@ resource oci_core_subnet export_SN_Client_1 {
 
 resource oci_core_service_gateway export_SGW {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:59:29.008Z"
-  }
   display_name = "SGW"
   freeform_tags = {
-  }
-  #route_table_id = <<Optional value not found in discovery>>
-  services {
-    service_id = "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna"
   }
   vcn_id = oci_core_vcn.export_VCN-Production.id
 }
 
 resource oci_core_service_gateway export_SGW_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:36:51.911Z"
-  }
   display_name = "SGW"
   freeform_tags = {
-  }
-  #route_table_id = <<Optional value not found in discovery>>
-  services {
-    service_id = "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna"
   }
   vcn_id = oci_core_vcn.export_VCN-Non-Production.id
 }
 
 resource oci_core_default_dhcp_options export_Default-DHCP-Options-for-VCN-Non-Production {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:31:20.634Z"
-  }
   display_name     = "Default DHCP Options for VCN-Non-Production"
   domain_name_type = "CUSTOM_DOMAIN"
   freeform_tags = {
@@ -333,10 +266,6 @@ resource oci_core_default_dhcp_options export_Default-DHCP-Options-for-VCN-Non-P
 resource oci_core_nat_gateway export_NGW {
   block_traffic  = "false"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:37:10.146Z"
-  }
   display_name = "NGW"
   freeform_tags = {
   }
@@ -347,10 +276,6 @@ resource oci_core_nat_gateway export_NGW {
 
 resource oci_core_route_table export_RT_Bastion {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:36:28.148Z"
-  }
   display_name = "RT_Bastion"
   freeform_tags = {
   }
@@ -366,10 +291,6 @@ resource oci_core_route_table export_RT_Bastion {
 
 resource oci_core_route_table export_RT_App {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:36:19.237Z"
-  }
   display_name = "RT_App"
   freeform_tags = {
   }
@@ -392,10 +313,6 @@ resource oci_core_route_table export_RT_App {
 
 resource oci_core_route_table export_RT_Backup {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:36:10.718Z"
-  }
   display_name = "RT_Backup"
   freeform_tags = {
   }
@@ -418,10 +335,6 @@ resource oci_core_route_table export_RT_Backup {
 
 resource oci_core_route_table export_RT_Client {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:36:01.745Z"
-  }
   display_name = "RT_Client"
   freeform_tags = {
   }
@@ -444,10 +357,6 @@ resource oci_core_route_table export_RT_Client {
 
 resource oci_core_default_route_table export_Default-Route-Table-for-VCN-Non-Production {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:31:20.634Z"
-  }
   display_name = "Default Route Table for VCN-Non-Production"
   freeform_tags = {
   }
@@ -456,10 +365,6 @@ resource oci_core_default_route_table export_Default-Route-Table-for-VCN-Non-Pro
 
 resource oci_core_security_list export_SL_Bastion {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:35:19.238Z"
-  }
   display_name = "SL_Bastion"
   egress_security_rules {
     description      = "Salida"
@@ -478,10 +383,6 @@ resource oci_core_security_list export_SL_Bastion {
 
 resource oci_core_security_list export_SL_App {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:35:19.238Z"
-  }
   display_name = "SL_App"
   egress_security_rules {
     description      = "Salida"
@@ -553,10 +454,6 @@ resource oci_core_security_list export_SL_App {
 
 resource oci_core_security_list export_SL_Backup {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:34:59.119Z"
-  }
   display_name = "SL_Backup"
   egress_security_rules {
     description      = "Salida"
@@ -628,10 +525,6 @@ resource oci_core_security_list export_SL_Backup {
 
 resource oci_core_security_list export_SL_Client {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:34:47.546Z"
-  }
   display_name = "SL_Client"
   egress_security_rules {
     description      = "Salida"
@@ -703,10 +596,6 @@ resource oci_core_security_list export_SL_Client {
 
 resource oci_core_default_security_list export_Default-Security-List-for-VCN-Non-Production {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:31:20.634Z"
-  }
   display_name = "Default Security List for VCN-Non-Production"
   egress_security_rules {
     #description = <<Optional value not found in discovery>>
@@ -765,10 +654,6 @@ resource oci_core_default_security_list export_Default-Security-List-for-VCN-Non
 
 resource oci_core_default_dhcp_options export_Default-DHCP-Options-for-VCN-Production {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:30:21.920Z"
-  }
   display_name     = "Default DHCP Options for VCN-Production"
   domain_name_type = "CUSTOM_DOMAIN"
   freeform_tags = {
@@ -794,10 +679,6 @@ resource oci_core_default_dhcp_options export_Default-DHCP-Options-for-VCN-Produ
 resource oci_core_nat_gateway export_NGW_1 {
   block_traffic  = "false"
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:59:43.543Z"
-  }
   display_name = "NGW"
   freeform_tags = {
   }
@@ -808,10 +689,6 @@ resource oci_core_nat_gateway export_NGW_1 {
 
 resource oci_core_route_table export_RT_Bastion_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:03:32.269Z"
-  }
   display_name = "RT_Bastion"
   freeform_tags = {
   }
@@ -827,10 +704,6 @@ resource oci_core_route_table export_RT_Bastion_1 {
 
 resource oci_core_route_table export_RT_App_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:03:19.898Z"
-  }
   display_name = "RT_App"
   freeform_tags = {
   }
@@ -853,10 +726,6 @@ resource oci_core_route_table export_RT_App_1 {
 
 resource oci_core_route_table export_RT_Backup_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:03:08.887Z"
-  }
   display_name = "RT_Backup"
   freeform_tags = {
   }
@@ -879,10 +748,6 @@ resource oci_core_route_table export_RT_Backup_1 {
 
 resource oci_core_route_table export_RT_Client_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:03:01.313Z"
-  }
   display_name = "RT_Client"
   freeform_tags = {
   }
@@ -905,10 +770,6 @@ resource oci_core_route_table export_RT_Client_1 {
 
 resource oci_core_default_route_table export_Default-Route-Table-for-VCN-Production {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:30:21.920Z"
-  }
   display_name = "Default Route Table for VCN-Production"
   freeform_tags = {
   }
@@ -917,10 +778,6 @@ resource oci_core_default_route_table export_Default-Route-Table-for-VCN-Product
 
 resource oci_core_security_list export_SL_Bastion_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:02:41.387Z"
-  }
   display_name = "SL_Bastion"
   egress_security_rules {
     description      = "Salida"
@@ -939,10 +796,6 @@ resource oci_core_security_list export_SL_Bastion_1 {
 
 resource oci_core_security_list export_SL_App_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:02:28.898Z"
-  }
   display_name = "SL_App"
   egress_security_rules {
     description      = "Salida"
@@ -1014,10 +867,6 @@ resource oci_core_security_list export_SL_App_1 {
 
 resource oci_core_security_list export_SL_Backup_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:02:17.453Z"
-  }
   display_name = "SL_Backup"
   egress_security_rules {
     description      = "Salida"
@@ -1089,10 +938,6 @@ resource oci_core_security_list export_SL_Backup_1 {
 
 resource oci_core_security_list export_SL_Client_1 {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T16:02:06.389Z"
-  }
   display_name = "SL_Client"
   egress_security_rules {
     description      = "Salida"
@@ -1164,10 +1009,6 @@ resource oci_core_security_list export_SL_Client_1 {
 
 resource oci_core_default_security_list export_Default-Security-List-for-VCN-Production {
   compartment_id = var.compartment_ocid
-  defined_tags = {
-    "Oracle-Tags.CreatedBy" = "oracleidentitycloudservice/jeffrey.vargas@oracle.com"
-    "Oracle-Tags.CreatedOn" = "2022-12-16T15:30:21.920Z"
-  }
   display_name = "Default Security List for VCN-Production"
   egress_security_rules {
     #description = <<Optional value not found in discovery>>
