@@ -223,6 +223,18 @@ resource oci_core_subnet export_SN_Client_1 {
   vcn_id = oci_core_vcn.export_VCN-Non-Production.id
 }
 
+#######################
+# Service Gateway (SGW)
+#######################
+data "oci_core_services" "all_oci_services" {
+  filter {
+    name   = "name"
+    values = ["All .* Services In Oracle Services Network"]
+    regex  = true
+  }
+  count = var.create_service_gateway == true ? 1 : 0
+}
+
 resource oci_core_service_gateway export_SGW {
   compartment_id = var.compartment_ocid
   display_name = "SGW"
@@ -230,7 +242,7 @@ resource oci_core_service_gateway export_SGW {
   }
   #route_table_id = <<Optional value not found in discovery>>
   services {
-    service_id = "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna"
+    service_id = lookup(data.oci_core_services.all_oci_services[0].services[0], "id")
   }
   vcn_id = oci_core_vcn.export_VCN-Production.id
 }
@@ -242,7 +254,7 @@ resource oci_core_service_gateway export_SGW_1 {
   }
   #route_table_id = <<Optional value not found in discovery>>
   services {
-    service_id = "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna"
+    service_id = lookup(data.oci_core_services.all_oci_services[0].services[0], "id")
   }
   vcn_id = oci_core_vcn.export_VCN-Non-Production.id
 }
@@ -277,7 +289,7 @@ resource oci_core_nat_gateway export_NGW {
   display_name = "NGW"
   freeform_tags = {
   }
-  public_ip_id = "ocid1.publicip.oc1.iad.aaaaaaaabp5clxbzzz4muy2utqndjbb4rporqyhixpnye5hup6gvxkodz7oa"
+  #public_ip_id = "ocid1.publicip.oc1.iad.aaaaaaaabp5clxbzzz4muy2utqndjbb4rporqyhixpnye5hup6gvxkodz7oa"
   #route_table_id = <<Optional value not found in discovery>>
   vcn_id = oci_core_vcn.export_VCN-Non-Production.id
 }
@@ -690,7 +702,7 @@ resource oci_core_nat_gateway export_NGW_1 {
   display_name = "NGW"
   freeform_tags = {
   }
-  public_ip_id = "ocid1.publicip.oc1.iad.aaaaaaaafkbrztsvlvruudg7imllweasjr37scrjz5x5pffnsfzxzfd6i7ma"
+  #public_ip_id = "ocid1.publicip.oc1.iad.aaaaaaaafkbrztsvlvruudg7imllweasjr37scrjz5x5pffnsfzxzfd6i7ma"
   #route_table_id = <<Optional value not found in discovery>>
   vcn_id = oci_core_vcn.export_VCN-Production.id
 }
